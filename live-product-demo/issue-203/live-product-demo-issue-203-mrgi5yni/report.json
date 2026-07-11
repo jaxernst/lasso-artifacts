@@ -1,0 +1,134 @@
+{
+  "ok": true,
+  "status": "passed",
+  "advisory": true,
+  "publicationStatus": "local_only",
+  "runId": "live-product-demo-issue-203-mrgi5yni",
+  "objective": "Walk the live product surface and capture review evidence.",
+  "baseUrl": "http://127.0.0.1:4000",
+  "targetUrlClass": "loopback",
+  "reportPath": ".smithers/reports/live-product-demo/live-product-demo-issue-203-mrgi5yni/report.md",
+  "screenshotPath": ".smithers/reports/live-product-demo/live-product-demo-issue-203-mrgi5yni/screenshots",
+  "artifacts": [
+    {
+      "kind": "report",
+      "localPath": ".smithers/reports/live-product-demo/live-product-demo-issue-203-mrgi5yni/report.md",
+      "title": "Markdown report"
+    },
+    {
+      "kind": "json",
+      "localPath": ".smithers/reports/live-product-demo/live-product-demo-issue-203-mrgi5yni/report.json",
+      "title": "JSON report"
+    },
+    {
+      "kind": "screenshot",
+      "localPath": ".smithers/reports/live-product-demo/live-product-demo-issue-203-mrgi5yni/screenshots/01-pricing.png",
+      "title": "/pricing",
+      "step": 1,
+      "primary": true
+    },
+    {
+      "kind": "screenshot",
+      "localPath": ".smithers/reports/live-product-demo/live-product-demo-issue-203-mrgi5yni/screenshots/02-pricing.png",
+      "title": "/pricing",
+      "step": 2,
+      "primary": false
+    },
+    {
+      "kind": "screenshot",
+      "localPath": ".smithers/reports/live-product-demo/live-product-demo-issue-203-mrgi5yni/screenshots/03-api-health.png",
+      "title": "/api/health",
+      "step": 3,
+      "primary": false
+    },
+    {
+      "kind": "screenshot",
+      "localPath": ".smithers/reports/live-product-demo/live-product-demo-issue-203-mrgi5yni/screenshots/04-api-health.png",
+      "title": "/api/health",
+      "step": 4,
+      "primary": false
+    }
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "action": "navigate",
+      "label": "/pricing",
+      "url": "http://127.0.0.1:4000/?pricing=true",
+      "title": "Lasso RPC",
+      "status": 200,
+      "ok": true,
+      "screenshotPath": ".smithers/reports/live-product-demo/live-product-demo-issue-203-mrgi5yni/screenshots/01-pricing.png",
+      "notes": [],
+      "errors": []
+    },
+    {
+      "step": 2,
+      "action": "screenshot",
+      "label": "/pricing",
+      "url": "http://127.0.0.1:4000/?pricing=true",
+      "title": "Lasso RPC",
+      "status": null,
+      "ok": true,
+      "screenshotPath": ".smithers/reports/live-product-demo/live-product-demo-issue-203-mrgi5yni/screenshots/02-pricing.png",
+      "notes": [],
+      "errors": []
+    },
+    {
+      "step": 3,
+      "action": "navigate",
+      "label": "/api/health",
+      "url": "http://127.0.0.1:4000/api/health",
+      "title": "",
+      "status": 200,
+      "ok": true,
+      "screenshotPath": ".smithers/reports/live-product-demo/live-product-demo-issue-203-mrgi5yni/screenshots/03-api-health.png",
+      "notes": [],
+      "errors": []
+    },
+    {
+      "step": 4,
+      "action": "screenshot",
+      "label": "/api/health",
+      "url": "http://127.0.0.1:4000/api/health",
+      "title": "",
+      "status": null,
+      "ok": true,
+      "screenshotPath": ".smithers/reports/live-product-demo/live-product-demo-issue-203-mrgi5yni/screenshots/04-api-health.png",
+      "notes": [],
+      "errors": []
+    }
+  ],
+  "visitedRoutes": [
+    {
+      "step": 1,
+      "action": "navigate",
+      "label": "/pricing",
+      "url": "http://127.0.0.1:4000/?pricing=true",
+      "title": "Lasso RPC",
+      "status": 200,
+      "ok": true,
+      "screenshotPath": ".smithers/reports/live-product-demo/live-product-demo-issue-203-mrgi5yni/screenshots/01-pricing.png",
+      "notes": [],
+      "errors": []
+    },
+    {
+      "step": 3,
+      "action": "navigate",
+      "label": "/api/health",
+      "url": "http://127.0.0.1:4000/api/health",
+      "title": "",
+      "status": 200,
+      "ok": true,
+      "screenshotPath": ".smithers/reports/live-product-demo/live-product-demo-issue-203-mrgi5yni/screenshots/03-api-health.png",
+      "notes": [],
+      "errors": []
+    }
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "rpcSmoke": null,
+  "summary": "Completed 4 live product demo step(s) with screenshots.",
+  "keyFindings": [],
+  "caveats": []
+}
