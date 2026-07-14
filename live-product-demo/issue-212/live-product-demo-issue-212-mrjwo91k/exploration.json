@@ -1,0 +1,263 @@
+{
+  "version": 1,
+  "runId": "live-product-demo-issue-212-mrjwo91k",
+  "baseUrl": "http://127.0.0.1:4000",
+  "finished": true,
+  "summary": "Explored Lasso demo landing and public RPC dashboard; captured screenshot and reviewed visible endpoint, routing/provider coverage, tester, and metrics areas without destructive actions.",
+  "findings": [
+    {
+      "finding": "Landing page positions Lasso as an RPC control plane with a JSON-RPC endpoint, smart routing, failover, observability, and cost control; primary CTAs include See it live, Use with your agent, Dashboard, and Read docs.",
+      "evidenceStep": 2
+    },
+    {
+      "finding": "Screenshot evidence was captured for the initial product landing surface.",
+      "evidenceStep": 3
+    },
+    {
+      "finding": "The public dashboard lists six supported chains and 35 providers, including Ethereum, Base, Arbitrum, and Sepolia variants, plus many named upstream RPC providers.",
+      "evidenceStep": 12
+    },
+    {
+      "finding": "Dashboard includes an RPC Request Tester showing public profile and a 50 RPS limit, along with status legend states such as Healthy, Lagging, Recovering, Degraded, Rate Limited, Circuit Open, and WS.",
+      "evidenceStep": 12
+    },
+    {
+      "finding": "Routing Profile metrics are visible for Public with RPS, success, latency, failovers, and a Live Activity panel waiting for requests.",
+      "evidenceStep": 20
+    },
+    {
+      "finding": "Navigating directly to /docs returned a JSON Not Found response, suggesting the docs link/path may not be implemented at that route in this demo.",
+      "evidenceStep": 18
+    }
+  ],
+  "caveats": [
+    "The Run control and some dashboard selector interactions were blocked by the safety policy, so no live RPC request was executed.",
+    "Clicking Metrics did not visibly change the dashboard content during observation.",
+    "Exploration was limited to same-origin product surfaces exposed through the lasso_demo_explore tool."
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "action": "start",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/",
+      "title": "Lasso RPC",
+      "observation": "Browser session started.",
+      "screenshotPath": null,
+      "error": null
+    },
+    {
+      "step": 2,
+      "action": "observe",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/",
+      "title": "Lasso RPC",
+      "observation": "Lasso\nRPC\nDashboard\nMetrics\nDocs\nS\nThe RPC control plane for fast and resilient blockchain apps\n\nOne JSON-RPC endpoint with smart routing, failover, observability, and cost control behind it.\n\nPOST\nhttps://localhost:4000/rpc/profile/public/fastest/1\nSee it live\nUse with your agent\nDashboard\nRead docs\nyour app\nlasso\nany evm chain",
+      "screenshotPath": null,
+      "error": null
+    },
+    {
+      "step": 3,
+      "action": "screenshot",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/",
+      "title": "Lasso RPC",
+      "observation": "Captured generated exploration screenshot.",
+      "screenshotPath": ".smithers/reports/live-product-demo/live-product-demo-issue-212-mrjwo91k/exploration/01-exploration.png",
+      "error": null
+    },
+    {
+      "step": 4,
+      "action": "click",
+      "ok": false,
+      "url": "http://127.0.0.1:4000/",
+      "title": "Lasso RPC",
+      "observation": "",
+      "screenshotPath": null,
+      "error": "locator.evaluate: Timeout 30000ms exceeded.\nCall log:\n  - waiting for getByRole('Dashboard').first()\n"
+    },
+    {
+      "step": 5,
+      "action": "click",
+      "ok": false,
+      "url": "http://127.0.0.1:4000/",
+      "title": "Lasso RPC",
+      "observation": "",
+      "screenshotPath": null,
+      "error": "locator.click: Error: strict mode violation: getByText('Dashboard') resolved to 2 elements:\n    1) <button phx-click=\"switch_tab\" phx-value-tab=\"overview\" class=\"relative px-3 py-2 text-sm font-medium transition-colors text-gray-400 hover:text-gray-200\">↵              Dashboard↵              ↵         …</button> aka getByRole('button', { name: 'Dashboard' })\n    2) <a href=\"/dashboard/public\" class=\"text-slate-400 underline decoration-slate-500/50 underline-offset-4 transition hover:text-white h"
+    },
+    {
+      "step": 6,
+      "action": "click",
+      "ok": false,
+      "url": "http://127.0.0.1:4000/",
+      "title": "Lasso RPC",
+      "observation": "",
+      "screenshotPath": null,
+      "error": "locator.evaluate: InvalidSelectorError: Error while parsing selector `button Dashboard` - unexpected symbol \"D\" at position 7\n    at syntaxError (<anonymous>:1693:11)\n    at parseAttributeSelector (<anonymous>:1842:5)\n    at Object.queryAll (<anonymous>:4942:22)\n    at InjectedScript._queryEngineAll (<anonymous>:6789:49)\n    at InjectedScript.querySelectorAll (<anonymous>:6776:30)\n    at eval (eval at evaluate (:290:30), <anonymous>:4:35)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at"
+    },
+    {
+      "step": 7,
+      "action": "press",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/",
+      "title": "Lasso RPC",
+      "observation": "Pressed Tab.",
+      "screenshotPath": null,
+      "error": null
+    },
+    {
+      "step": 8,
+      "action": "press",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/",
+      "title": "Lasso RPC",
+      "observation": "Pressed Tab.",
+      "screenshotPath": null,
+      "error": null
+    },
+    {
+      "step": 9,
+      "action": "press",
+      "ok": false,
+      "url": "http://127.0.0.1:4000/",
+      "title": "Lasso RPC",
+      "observation": "",
+      "screenshotPath": null,
+      "error": "Blocked unsafe or mutating request triggered by key press."
+    },
+    {
+      "step": 10,
+      "action": "observe",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/",
+      "title": "Lasso RPC",
+      "observation": "Lasso\nRPC\nDashboard\nMetrics\nDocs\nS\nThe RPC control plane for fast and resilient blockchain apps\n\nOne JSON-RPC endpoint with smart routing, failover, observability, and cost control behind it.\n\nPOST\nhttps://localhost:4000/rpc/profile/public/fastest/1\nSee it live\nUse with your agent\nDashboard\nRead docs\nyour app\nlasso\nany evm chain",
+      "screenshotPath": null,
+      "error": null
+    },
+    {
+      "step": 11,
+      "action": "click",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/",
+      "title": "",
+      "observation": "Clicked text:See it live.",
+      "screenshotPath": null,
+      "error": null
+    },
+    {
+      "step": 12,
+      "action": "observe",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/dashboard/public?run=requests",
+      "title": "Overview Dashboard | Lasso RPC",
+      "observation": "Lasso\nRPC\nDashboard\nMetrics\nPROFILE\nPublic RPC\nS\nEthereum Mainnet\nID 1\nBase Mainnet\nID 8453\nArbitrum One\nID 42161\nBase Sepolia\nID 84532\nArbitrum Sepolia\nID 421614\nEthereum Sepolia\nID 11155111\ndRPC Ethereum\nPublicNode Ethereum\nMerkle Ethereum\n1RPC Ethereum\nLlamaRPC Ethereum\nBlockPI Ethereum\nNodies Ethereum\nOnFinality Ethereum\nFlashbots Ethereum\nbloXroute Ethereum\nNOWNodes Ethereum\nLava Ethereum\nMEV Blocker\nLlamaRPC Base\nBase Official\nPublicNode Base\ndRPC Base\nLava Base\ndRPC Arbitrum\nLava Arbitrum\nPublicNode Arbitrum\nPocket Network Arbitrum\ndRPC Base Sepolia\nPublicNode Base Sepolia\nBase Official Sepolia\nNodies Base Sepolia\ndRPC Arbitrum Sepolia\nPublicNode Arbitrum Sepolia\nArbitrum Official Sepolia\nOnFinality Arbitrum Sepolia\ndRPC Sepolia\nPublicNode Sepolia\n1RPC Sepolia\nOnFinality Sepolia\nNodies Sepolia\nRPC Request Tester\n↘\npublic\n·\n50 RPS limit\nRun\nHealthy\nLagging\nRecovering\nDegraded\nRate Limited\nCircuit Open\nWS\nRouting Profile\nPublic\n35 providers · 6 chains\nRPS\n0/s\nSUCCESS\n—\nLATENCY\n—\nFAILOVERS\n0/min\nLive Activity\nWaiting for requests...",
+      "screenshotPath": null,
+      "error": null
+    },
+    {
+      "step": 13,
+      "action": "click",
+      "ok": false,
+      "url": "http://127.0.0.1:4000/dashboard/public?run=requests",
+      "title": "Overview Dashboard | Lasso RPC",
+      "observation": "",
+      "screenshotPath": null,
+      "error": "Blocked unsafe or mutating request triggered by click."
+    },
+    {
+      "step": 14,
+      "action": "click",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/dashboard/public?run=requests",
+      "title": "Overview Dashboard | Lasso RPC",
+      "observation": "Clicked text:Metrics.",
+      "screenshotPath": null,
+      "error": null
+    },
+    {
+      "step": 15,
+      "action": "observe",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/dashboard/public?run=requests",
+      "title": "Overview Dashboard | Lasso RPC",
+      "observation": "Lasso\nRPC\nDashboard\nMetrics\nPROFILE\nPublic RPC\nS\nEthereum Mainnet\nID 1\nBase Mainnet\nID 8453\nArbitrum One\nID 42161\nBase Sepolia\nID 84532\nArbitrum Sepolia\nID 421614\nEthereum Sepolia\nID 11155111\ndRPC Ethereum\nPublicNode Ethereum\nMerkle Ethereum\n1RPC Ethereum\nLlamaRPC Ethereum\nBlockPI Ethereum\nNodies Ethereum\nOnFinality Ethereum\nFlashbots Ethereum\nbloXroute Ethereum\nNOWNodes Ethereum\nLava Ethereum\nMEV Blocker\nLlamaRPC Base\nBase Official\nPublicNode Base\ndRPC Base\nLava Base\ndRPC Arbitrum\nLava Arbitrum\nPublicNode Arbitrum\nPocket Network Arbitrum\ndRPC Base Sepolia\nPublicNode Base Sepolia\nBase Official Sepolia\nNodies Base Sepolia\ndRPC Arbitrum Sepolia\nPublicNode Arbitrum Sepolia\nArbitrum Official Sepolia\nOnFinality Arbitrum Sepolia\ndRPC Sepolia\nPublicNode Sepolia\n1RPC Sepolia\nOnFinality Sepolia\nNodies Sepolia\nRPC Request Tester\n↘\npublic\n·\n50 RPS limit\nRun\nHealthy\nLagging\nRecovering\nDegraded\nRate Limited\nCircuit Open\nWS\nRouting Profile\nPublic\n35 providers · 6 chains\nRPS\n0/s\nSUCCESS\n—\nLATENCY\n—\nFAILOVERS\n0/min\nLive Activity\nWaiting for requests...",
+      "screenshotPath": null,
+      "error": null
+    },
+    {
+      "step": 16,
+      "action": "click",
+      "ok": false,
+      "url": "http://127.0.0.1:4000/dashboard/public?run=requests",
+      "title": "Overview Dashboard | Lasso RPC",
+      "observation": "",
+      "screenshotPath": null,
+      "error": "locator.evaluate: Timeout 30000ms exceeded.\nCall log:\n  - waiting for getByText('Docs').first()\n"
+    },
+    {
+      "step": 17,
+      "action": "navigate",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/docs",
+      "title": "",
+      "observation": "Navigated to http://127.0.0.1:4000/docs.",
+      "screenshotPath": null,
+      "error": null
+    },
+    {
+      "step": 18,
+      "action": "observe",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/docs",
+      "title": "",
+      "observation": "{\"errors\":{\"detail\":\"Not Found\"}}",
+      "screenshotPath": null,
+      "error": null
+    },
+    {
+      "step": 19,
+      "action": "navigate",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/dashboard/public",
+      "title": "Overview Dashboard | Lasso RPC",
+      "observation": "Navigated to http://127.0.0.1:4000/dashboard/public.",
+      "screenshotPath": null,
+      "error": null
+    },
+    {
+      "step": 20,
+      "action": "observe",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/dashboard/public",
+      "title": "Overview Dashboard | Lasso RPC",
+      "observation": "Lasso\nRPC\nDashboard\nMetrics\nPROFILE\nPublic RPC\nS\nEthereum Mainnet\nID 1\nBase Mainnet\nID 8453\nArbitrum One\nID 42161\nBase Sepolia\nID 84532\nArbitrum Sepolia\nID 421614\nEthereum Sepolia\nID 11155111\ndRPC Ethereum\nPublicNode Ethereum\nMerkle Ethereum\n1RPC Ethereum\nLlamaRPC Ethereum\nBlockPI Ethereum\nNodies Ethereum\nOnFinality Ethereum\nFlashbots Ethereum\nbloXroute Ethereum\nNOWNodes Ethereum\nLava Ethereum\nMEV Blocker\nLlamaRPC Base\nBase Official\nPublicNode Base\ndRPC Base\nLava Base\ndRPC Arbitrum\nLava Arbitrum\nPublicNode Arbitrum\nPocket Network Arbitrum\ndRPC Base Sepolia\nPublicNode Base Sepolia\nBase Official Sepolia\nNodies Base Sepolia\ndRPC Arbitrum Sepolia\nPublicNode Arbitrum Sepolia\nArbitrum Official Sepolia\nOnFinality Arbitrum Sepolia\ndRPC Sepolia\nPublicNode Sepolia\n1RPC Sepolia\nOnFinality Sepolia\nNodies Sepolia\nRPC Request Tester\n↘\npublic\n·\n50 RPS limit\nRun\nHealthy\nLagging\nRecovering\nDegraded\nRate Limited\nCircuit Open\nWS\nRouting Profile\nPublic\n35 providers · 6 chains\nRPS\n0/s\nSUCCESS\n—\nLATENCY\n—\nFAILOVERS\n0/min\nLive Activity\nWaiting for requests...",
+      "screenshotPath": null,
+      "error": null
+    },
+    {
+      "step": 21,
+      "action": "click",
+      "ok": false,
+      "url": "http://127.0.0.1:4000/dashboard/public",
+      "title": "Overview Dashboard | Lasso RPC",
+      "observation": "",
+      "screenshotPath": null,
+      "error": "Blocked unsafe or mutating request triggered by click."
+    },
+    {
+      "step": 22,
+      "action": "finish",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/dashboard/public",
+      "title": "Overview Dashboard | Lasso RPC",
+      "observation": "Explored Lasso demo landing and public RPC dashboard; captured screenshot and reviewed visible endpoint, routing/provider coverage, tester, and metrics areas without destructive actions.",
+      "screenshotPath": null,
+      "error": null
+    }
+  ],
+  "screenshots": [
+    ".smithers/reports/live-product-demo/live-product-demo-issue-212-mrjwo91k/exploration/01-exploration.png"
+  ]
+}
