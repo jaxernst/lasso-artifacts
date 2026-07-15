@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "runId": "run-cac1b3b546bec04d78938f1225ffd54c",
+  "baseUrl": "http://127.0.0.1:4000",
+  "finished": true,
+  "summary": "Captured the home route showing the new fixed bottom minimal routing diagram/graphic for PR #199 at the requested head SHA context.",
+  "findings": [
+    {
+      "finding": "Home page loaded at the root route with hero copy and navigation visible, plus the bottom routing diagram labels: 'your app', 'lasso', and 'any evm chain'.",
+      "evidenceStep": 2
+    },
+    {
+      "finding": "A visual screenshot was captured of the home page including the fixed bottom minimal routing SVG/diagram area.",
+      "evidenceStep": 3
+    }
+  ],
+  "caveats": [
+    "Did not interact with any destructive, billing, funding, payment, or deletion controls.",
+    "Tool evidence does not expose the screenshot path in the observation, but the screenshot was captured successfully."
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "action": "start",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/",
+      "title": "Lasso RPC",
+      "observation": "Browser session started.",
+      "screenshotPath": null,
+      "error": null
+    },
+    {
+      "step": 2,
+      "action": "observe",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/",
+      "title": "Lasso RPC",
+      "observation": " Lasso RPC\nDashboard Metrics\nDocs\nS\nsmithers-live-demo-run-cac1b3b546bec04d78938f1225ffd54c@example.test\nsmithers-live-demo-run-cac1b3b546bec04d78938f1225ffd54c@example.test\nKeys  New Key\nAccount \nlasso_1lKkQw...BRhWzM\n \n Claim\n\nClaiming transfers prepaid CU to your account balance.\n\n Logout\nThe RPC control plane for fast and resilient blockchain apps\n\nOne JSON-RPC endpoint with smart routing, failover, observability, and cost control behind it.\n\nPOST https://localhost:4000/rpc/profile/public/fastest/1 See it live \nUse with your agent \nBuild your own RPC Dashboard Docs\nyour app\nlasso\nany evm chain",
+      "screenshotPath": null,
+      "error": null
+    },
+    {
+      "step": 3,
+      "action": "screenshot",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/",
+      "title": "Lasso RPC",
+      "observation": "Captured generated exploration screenshot.",
+      "screenshotPath": ".smithers/reports/live-product-demo/run-cac1b3b546bec04d78938f1225ffd54c/exploration/01-exploration.png",
+      "error": null
+    },
+    {
+      "step": 4,
+      "action": "finish",
+      "ok": true,
+      "url": "http://127.0.0.1:4000/",
+      "title": "Lasso RPC",
+      "observation": "Captured the home route showing the new fixed bottom minimal routing diagram/graphic for PR #199 at the requested head SHA context.",
+      "screenshotPath": null,
+      "error": null
+    }
+  ],
+  "screenshots": [
+    ".smithers/reports/live-product-demo/run-cac1b3b546bec04d78938f1225ffd54c/exploration/01-exploration.png"
+  ]
+}
